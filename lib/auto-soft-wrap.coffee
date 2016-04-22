@@ -21,9 +21,10 @@ module.exports = AutoSoftWrap =
 	#didChangeActiveItemInPane is a text editor in most cases. Lets make sure we
 	# check for otherwise
 	didChangeActiveItemInPane = (item) ->
-		if item.getPath?
-			path = item.getPath()
-			extension = path.substr(path.lastIndexOf("."))
-			fileTypes = atom.config.get("auto-soft-wrap.softWrapFileTypes")
-			if (extension in fileTypes)
-				item.setSoftWrapped(true)
+		if item?
+			if item.getPath?
+				path = item.getPath()
+				extension = path.substr(path.lastIndexOf("."))
+				fileTypes = atom.config.get("auto-soft-wrap.softWrapFileTypes")
+				if (extension in fileTypes)
+					item.setSoftWrapped(true)

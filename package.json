@@ -1,7 +1,7 @@
 {
   "name": "auto-soft-wrap",
   "main": "./lib/auto-soft-wrap",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "A package that automatically softwraps a file based on its extension.",
   "keywords": [
   ],

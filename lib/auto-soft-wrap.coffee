@@ -8,6 +8,7 @@ module.exports = AutoSoftWrap =
 
   activate: (@state) ->
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
+    didChangeActiveItemInPane(atom.workspace.getActiveTextEditor())
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.workspace.onDidChangeActivePaneItem(didChangeActiveItemInPane)
 

@@ -25,7 +25,8 @@ module.exports = AutoSoftWrap =
 		if item?
 			if item.getPath?
 				path = item.getPath()
-				extension = path.substr(path.lastIndexOf("."))
-				fileTypes = atom.config.get("auto-soft-wrap.softWrapFileTypes")
-				if (extension in fileTypes)
-					item.setSoftWrapped(true)
+				if path?
+					extension = path.substr(path.lastIndexOf("."))
+					fileTypes = atom.config.get("auto-soft-wrap.softWrapFileTypes")
+					if (extension in fileTypes)
+						item.setSoftWrapped(true)

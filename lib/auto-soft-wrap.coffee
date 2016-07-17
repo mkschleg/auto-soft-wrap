@@ -17,7 +17,7 @@ module.exports = AutoSoftWrap =
     @subscriptions.dispose()
 
   serialize: ->
-
+    
 
 	#didChangeActiveItemInPane is a text editor in most cases. Lets make sure we
 	# check for otherwise
@@ -29,4 +29,5 @@ module.exports = AutoSoftWrap =
 					extension = path.substr(path.lastIndexOf("."))
 					fileTypes = atom.config.get("auto-soft-wrap.softWrapFileTypes")
 					if (extension in fileTypes)
-						item.setSoftWrapped(true)
+            if item.setSoftWrapped?
+              item.setSoftWrapped(true)

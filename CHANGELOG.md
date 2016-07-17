@@ -1,3 +1,6 @@
+## 0.3.1 - Bug Fix
+* Error in when an item doesn't have setSoftWrapped functionality.
+
 ## 0.2.0 - Release
 * Initial Release to atom.io
 
